@@ -1,0 +1,20 @@
+name: Sync Forecast Room archive
+on:
+  workflow_dispatch:
+  push:
+    paths: ['scripts/sync_archive.py', '.github/workflows/sync.yml']
+  schedule:
+    - cron: '20 * * * *'
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python scripts/sync_archive.py
+      - run: |
+          git config user.name 'Forecast Archive Sync'
+          git config user.email 'forecast-sync@users.noreply.github.com'
+          git add data
+          git diff --cached --quiet || (git commit -m 'Sync saved forecast archives' && git push)
