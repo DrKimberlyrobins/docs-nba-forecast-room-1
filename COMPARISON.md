@@ -44,7 +44,7 @@ The collector attempts NBA official base, advanced, possessions, rebounding and 
 ## Remaining blockers
 
 - No external game-specific projection feed has actually been retrieved. Authorized imports are ready, but no user data was fabricated to demonstrate a connection.
-- The existing DOC collector has no November 4 run or forecasts. Its latest repository archive is November 1. Today's rosters and schedule are present, but current DOC projections remain N/A until that existing collector writes them.
+- The original collector was refreshed through its supported update route: 14 November 4 pregame forecasts saved at 08:56:10 UTC, with 186 historical box scores, 28 rosters, 123 injury rows and no collection errors. The comparison workflow syncs these original forecasts before refreshing its separate data.
 - No verified sportsbook player quotes were available, so there are no live Top Two recommendations or real-data betting-edge validation yet.
 - Official NBA tracking endpoints failed in this environment; GitHub Actions will retry, with failures visible.
 - Shared future capture/grading is implemented but cannot yet be verified end-to-end on real eligible external forecasts and completed results. No historical pregame record is backfilled using postgame imports.
