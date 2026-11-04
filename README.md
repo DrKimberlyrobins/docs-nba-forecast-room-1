@@ -2,7 +2,11 @@
 
 **GitHub edition — independent of the original NBA War Room and ChatGPT Site.**
 
-## Status
+## Player engine comparison
+
+The additive **PLAYER ENGINE COMPARISON** tab includes sourced schedules/rosters, separate authorized imports for six external engines, actual last-five/last-ten/season statistics, input-gated Top Two candidates, and append-only shared receipt/grading workflows. No external game-specific engine feed is connected yet. See [COMPARISON.md](COMPARISON.md) for the access audit, exact limitations, import instructions and verification.
+
+## Original foundation status (historical description)
 The first working foundation is in `index.html`. It includes:
 - Searchable player directory: position, listed/confirmed starter status, specialty, birthdate-derived age, height, weight, current-season salary and role notes.
 - Explicit source and timestamp fields.

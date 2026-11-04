@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.openai/
+dist/
+data/comparison/playerlogs/
