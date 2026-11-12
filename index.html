@@ -77,4 +77,4 @@ function render(){stats();document.querySelectorAll('nav button').forEach(b=>b.c
 document.addEventListener('click',async e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.view){view=b.dataset.view;render();}if(b.dataset.game){selected=b.dataset.game;render();}if(b.dataset.player)playerDetail(b.dataset.player);if(b.dataset.date){$('#date').value=b.dataset.date;load();}if(b.dataset.snapshot){const r=await fetch('data/snapshots/'+encodeURIComponent(encodeURIComponent(b.dataset.snapshot))+'.txt'),f=await readArchive(r);$('#playerdetail').innerHTML='<h2>Original forecast snapshot</h2><p class="small muted">'+esc(f.name)+' · '+time(f.as_of)+' · '+esc(f.model_version)+'</p><pre class="report">'+esc(JSON.stringify(f,null,2))+'</pre>';$('#player').showModal();}});
 $('#load').onclick=load;
 
-</script><script src="comparison-ui.js"></script><script>load();</script></body></html>
+</script><script src="comparison-ui.js"></script><script>load();</script><script src="betting-edge.js" defer></script></body></html>
